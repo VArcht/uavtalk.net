@@ -16,6 +16,16 @@ namespace UavTalk
         }
 
         private static Dictionary<UInt32, Type> mObjectIds = new Dictionary<uint, Type>();
+
+        public static UavDataObject CreateObject(uint objId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void RegisterObjects()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

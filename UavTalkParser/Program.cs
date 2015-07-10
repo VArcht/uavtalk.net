@@ -9,6 +9,9 @@ namespace UavTalkParser
     {
         public static void Main(string[] args)
         {
+
+            //var downloader = new GitWebClient();
+
             if (args.Length < 1)
             {
                 PrintUsage();

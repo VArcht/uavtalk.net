@@ -2,16 +2,41 @@ using System;
 using System.IO;
 using System.Xml;
 using System.Collections.Generic;
+using GitDownloader;
+using Newtonsoft.Json;
 using UavObjectGenerator;
 
 namespace UavGen
 {
     class MainClass
     {
+        private static string url = @"https://api.github.com/repos/taulabs/taulabs/contents/shared/uavobjectdefinition";
+
         public static int Main(string[] args)
         {
             try
             {
+
+                
+                var test = GitWebClient.WebRequest(url, "", "GET", null, null);
+                var response = JsonConvert.DeserializeObject<GitContent[]>(test);
+
+                var contents = new GitContents();
+
+                foreach (var gitContent in response)
+                {
+                    var contentResponse =  GitWebClient.WebRequest(gitContent.download_url, "", "GET", null, null);
+
+                    XmlDocument xm = new XmlDocument();
+                    xm.LoadXml(contentResponse);
+                    //var contentObject = JsonConvert.DeserializeObject<GitContent>(contentResponse);
+
+
+                    //if (contentObject != null) contents.Contents.Add(contentObject);
+                }
+
+                
+
                 Configuration c = new Configuration(args);
                 c.CheckValid();
 
