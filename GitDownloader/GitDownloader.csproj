@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GitContent.cs" />
+    <Compile Include="GitContents.cs" />
     <Compile Include="GitWebClient.cs" />
+    <Compile Include="Links.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

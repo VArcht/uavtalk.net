@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -40,6 +40,60 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UavDataObject.cs" />
     <Compile Include="ObjectSummary.cs" />
+    <Compile Include="UavObjects\acceldesired.cs" />
+    <Compile Include="UavObjects\altitudeholdstate.cs" />
+    <Compile Include="UavObjects\baroairspeed.cs" />
+    <Compile Include="UavObjects\brushlessgimbalsettings.cs" />
+    <Compile Include="UavObjects\fixedwingairspeeds.cs" />
+    <Compile Include="UavObjects\fixedwingpathfollowersettingscc.cs" />
+    <Compile Include="UavObjects\flightstats.cs" />
+    <Compile Include="UavObjects\flightstatssettings.cs" />
+    <Compile Include="UavObjects\geofencesettings.cs" />
+    <Compile Include="UavObjects\groundpathfollowersettings.cs" />
+    <Compile Include="UavObjects\hottsettings.cs" />
+    <Compile Include="UavObjects\hwcolibri.cs" />
+    <Compile Include="UavObjects\hwcoptercontrol.cs" />
+    <Compile Include="UavObjects\hwdiscoveryf4.cs" />
+    <Compile Include="UavObjects\hwflyingf3.cs" />
+    <Compile Include="UavObjects\hwflyingf4.cs" />
+    <Compile Include="UavObjects\hwfreedom.cs" />
+    <Compile Include="UavObjects\hwquanton.cs" />
+    <Compile Include="UavObjects\hwrevolution.cs" />
+    <Compile Include="UavObjects\hwrevomini.cs" />
+    <Compile Include="UavObjects\hwsparky.cs" />
+    <Compile Include="UavObjects\hwsparky2.cs" />
+    <Compile Include="UavObjects\hwsparkybgc.cs" />
+    <Compile Include="UavObjects\hwtaulink.cs" />
+    <Compile Include="UavObjects\i2cvm.cs" />
+    <Compile Include="UavObjects\i2cvmuserprogram.cs" />
+    <Compile Include="UavObjects\inssettings.cs" />
+    <Compile Include="UavObjects\insstate.cs" />
+    <Compile Include="UavObjects\loggingsettings.cs" />
+    <Compile Include="UavObjects\loggingstats.cs" />
+    <Compile Include="UavObjects\loitercommand.cs" />
+    <Compile Include="UavObjects\modulesettings.cs" />
+    <Compile Include="UavObjects\mwratesettings.cs" />
+    <Compile Include="UavObjects\nedposition.cs" />
+    <Compile Include="UavObjects\openlrs.cs" />
+    <Compile Include="UavObjects\openlrsstatus.cs" />
+    <Compile Include="UavObjects\pathplannersettings.cs" />
+    <Compile Include="UavObjects\picocsettings.cs" />
+    <Compile Include="UavObjects\picocstatus.cs" />
+    <Compile Include="UavObjects\radiocombridgestats.cs" />
+    <Compile Include="UavObjects\rfm22breceiver.cs" />
+    <Compile Include="UavObjects\rfm22bstatus.cs" />
+    <Compile Include="UavObjects\sensorsettings.cs" />
+    <Compile Include="UavObjects\sessionmanaging.cs" />
+    <Compile Include="UavObjects\stateestimation.cs" />
+    <Compile Include="UavObjects\systemident.cs" />
+    <Compile Include="UavObjects\tabletinfo.cs" />
+    <Compile Include="UavObjects\trimangles.cs" />
+    <Compile Include="UavObjects\trimanglessettings.cs" />
+    <Compile Include="UavObjects\ubloxinfo.cs" />
+    <Compile Include="UavObjects\vibrationanalysisoutput.cs" />
+    <Compile Include="UavObjects\vibrationanalysissettings.cs" />
+    <Compile Include="UavObjects\vtolpathfollowerstatus.cs" />
+    <Compile Include="UavObjects\windvelocityactual.cs" />
     <Compile Include="UavTalkWalker.cs" />
     <Compile Include="UavObjects\accels.cs" />
     <Compile Include="UavObjects\accessorydesired.cs" />
@@ -47,9 +101,7 @@
     <Compile Include="UavObjects\actuatordesired.cs" />
     <Compile Include="UavObjects\actuatorsettings.cs" />
     <Compile Include="UavObjects\airspeedactual.cs" />
-    <Compile Include="UavObjects\airspeedsensor.cs" />
     <Compile Include="UavObjects\airspeedsettings.cs" />
-    <Compile Include="UavObjects\altholdsmoothed.cs" />
     <Compile Include="UavObjects\altitudeholddesired.cs" />
     <Compile Include="UavObjects\altitudeholdsettings.cs" />
     <Compile Include="UavObjects\attitudeactual.cs" />
@@ -58,8 +110,6 @@
     <Compile Include="UavObjects\baroaltitude.cs" />
     <Compile Include="UavObjects\cameradesired.cs" />
     <Compile Include="UavObjects\camerastabsettings.cs" />
-    <Compile Include="UavObjects\ekfconfiguration.cs" />
-    <Compile Include="UavObjects\ekfstatevariance.cs" />
     <Compile Include="UavObjects\faultsettings.cs" />
     <Compile Include="UavObjects\firmwareiapobj.cs" />
     <Compile Include="UavObjects\fixedwingpathfollowersettings.cs" />
@@ -81,36 +131,24 @@
     <Compile Include="UavObjects\gyros.cs" />
     <Compile Include="UavObjects\gyrosbias.cs" />
     <Compile Include="UavObjects\homelocation.cs" />
-    <Compile Include="UavObjects\hwsettings.cs" />
-    <Compile Include="UavObjects\i2cstats.cs" />
     <Compile Include="UavObjects\magbias.cs" />
     <Compile Include="UavObjects\magnetometer.cs" />
     <Compile Include="UavObjects\manualcontrolcommand.cs" />
     <Compile Include="UavObjects\manualcontrolsettings.cs" />
     <Compile Include="UavObjects\mixersettings.cs" />
     <Compile Include="UavObjects\mixerstatus.cs" />
-    <Compile Include="UavObjects\mpu6000settings.cs" />
     <Compile Include="UavObjects\nedaccel.cs" />
     <Compile Include="UavObjects\objectpersistence.cs" />
     <Compile Include="UavObjects\ObjectSummary.cs" />
-    <Compile Include="UavObjects\oplinkreceiver.cs" />
     <Compile Include="UavObjects\oplinksettings.cs" />
-    <Compile Include="UavObjects\oplinkstatus.cs" />
-    <Compile Include="UavObjects\osdsettings.cs" />
     <Compile Include="UavObjects\overosyncsettings.cs" />
     <Compile Include="UavObjects\overosyncstats.cs" />
-    <Compile Include="UavObjects\pathaction.cs" />
     <Compile Include="UavObjects\pathdesired.cs" />
     <Compile Include="UavObjects\pathstatus.cs" />
-    <Compile Include="UavObjects\poilearnsettings.cs" />
     <Compile Include="UavObjects\poilocation.cs" />
     <Compile Include="UavObjects\positionactual.cs" />
     <Compile Include="UavObjects\ratedesired.cs" />
     <Compile Include="UavObjects\receiveractivity.cs" />
-    <Compile Include="UavObjects\relaytuning.cs" />
-    <Compile Include="UavObjects\relaytuningsettings.cs" />
-    <Compile Include="UavObjects\revocalibration.cs" />
-    <Compile Include="UavObjects\revosettings.cs" />
     <Compile Include="UavObjects\sonaraltitude.cs" />
     <Compile Include="UavObjects\stabilizationdesired.cs" />
     <Compile Include="UavObjects\stabilizationsettings.cs" />
@@ -127,9 +165,7 @@
     <Compile Include="UavObjects\waypointactive.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="UavObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\UavGen\UavGen.csproj">
       <Project>{D865FF9A-5D23-4E9D-818C-AAA7DCD54955}</Project>
